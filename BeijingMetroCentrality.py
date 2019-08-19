@@ -3,7 +3,7 @@ import json
 import networkx as nx
 from networkx.algorithms.centrality import *
 
-with open("1100_drw_beijing.json", "r", encoding="utf-8") as dump_f:
+with open("4401_drw_guangzhou.json", "r", encoding="utf-8") as dump_f:
     datas = json.load(dump_f)
 
 line_list = datas["l"]
@@ -30,6 +30,8 @@ closeness_centrality = sorted(closeness_centrality.items(), key=lambda d: d[1], 
 betweenness_centrality = sorted(betweenness_centrality.items(), key=lambda d: d[1],
                                 reverse=True)
 
-# print(degree_centrality)
+print(degree_centrality)
+print("\n")
 print(closeness_centrality)
-# print(betweenness_centrality)
+print("\n")
+print(betweenness_centrality)
